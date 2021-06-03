@@ -1,0 +1,10 @@
+= form_for(:session, url: sessions_path, html: { class: "new_session" })  do |f|
+  .field
+    = f.label 'email'
+    = f.text_field :email
+  .field
+    = f.label t('users.form.password')
+    = f.password_field :password
+
+  .actions
+    = f.submit t('.sign_in'), class: "main-button"

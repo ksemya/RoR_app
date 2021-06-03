@@ -1,0 +1,21 @@
+$('.image .image_display').css({"display": "none"});
+$('.img-left-side').css({"display": "none"});
+$('.img-right-side').css({"display": "none"});
+$(document).click(function(e){
+    if($(e.target).is(".select_theme") ||
+        $(e.target).closest(".select_theme").length) {
+        console.log(": In doc.click = IN side content area"  );
+    }
+    else {
+        console.log(": In doc.click = OUT side content area"  );
+        $('.form_select').css({"display": "none"});
+        $('.select_theme').empty().html("<%= j render 'work/button_theme_select' -%>");
+//        $('.image .image_display').css({"display": "block"});
+//        $('.img-left-side').css({"display": "block"});
+//        $('.img-right-side').css({"display": "block"});
+    }
+});
+$('.select_theme').empty().html("<%= j render 'choose_theme_from_arr' -%>");
+
+
+

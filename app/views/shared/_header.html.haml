@@ -1,0 +1,20 @@
+%header
+  %nav.main-menu
+    %ul.main-menu__list
+      %li= link_to t('.home'), root_path
+      %li.locale
+        = link_to "ru", locale: :ru
+        = link_to "en", locale: :en
+        %b
+          = I18n.locale
+
+      - if signed_in?
+        %li= link_to t('.work'), work_path
+        %li.logged
+          = gravatar_for current_user
+          %a= link_to current_user.name, current_user
+          %a= link_to t('.settings'), edit_user_path(current_user)
+          %a= link_to t('.sign_out'), signout_path, method: "delete"
+      - else
+        %li
+          = link_to t('.sign_in'), signin_path

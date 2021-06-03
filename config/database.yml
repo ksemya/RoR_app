@@ -1,0 +1,28 @@
+default: &default
+  host: localhost
+  adapter: postgresql
+  encoding: UTF8
+  username: postgres
+  timeout: 5000
+  reaping_frequency: 30
+
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: projectdb_development
+  password: password
+
+test:
+  <<: *default
+  database: projectdb_test
+  password: password
+
+production:
+  <<: *default
+  database: projectdb_production
+  password: <%= ENV['EXERCISE_DATABASE_PASSWORD'] %>
+

@@ -1,0 +1,104 @@
+
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1 {
+    color: #b5286c;
+    font-size: 30px;
+    text-align: center;
+}
+
+li {
+    font-size: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  & header {
+    width: 100vw;
+    height: 50px;
+    background-color: #f0c939;
+    color: #b5286c;
+  }
+  & a {
+    text-decoration: none;
+    color: inherit;
+    &:hover, &:visited {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+  & footer {
+    width: 100%;
+    height: 50px;
+    & a {
+      font-size: 17px;
+    }
+  }
+}
+
+.main-menu {
+  height: 100%;
+  width: 100%;
+  &__list {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type:none;
+    margin: 0;
+    padding: 0 15px;
+  }
+  & a {
+    color: inherit;
+  }
+  & .logged {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .gravatar{
+      height: 50px;
+    }
+    & a {
+      margin-right: 10px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+  &>.main-button {
+    width: 20%;
+  }
+}
+
+.main-button {
+  width: 100%;
+  background-color: #b5286c;
+  color: #f0c939;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  &:visited {
+    background-color: #b5286c;
+    color: #f0c939;
+  }
+  &:hover {
+    background-color: #b9015a;
+    color: #eb0;
+  }
+}

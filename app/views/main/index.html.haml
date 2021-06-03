@@ -1,0 +1,7 @@
+%div.main
+  %h1= t('.welcome')
+  - if signed_in?
+    = link_to t('.start_work'), work_path, class: "main-button"
+
+  - else
+    = link_to t('users.form.sign_up'), signup_path, class: "main-button"

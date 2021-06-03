@@ -1,0 +1,8 @@
+.form_select
+  = form_tag("/display_theme", remote: true,  :format => :js) do
+    = select_tag :theme,
+     options_for_select(@themes, selected: @selected_theme),
+     prompt: t('work.button_theme_select.select_theme'),
+     onchange:  'Rails.fire(this.form, "submit")',
+     formats: [ :js ],
+     remote: true

@@ -1,0 +1,38 @@
+// Place all the styles related to the work controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.set-user-value {
+  display: none;
+  & input {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+}
+
+.user-value-exists, .image_ave_value {
+  display: none;
+}
+
+.img-right-side, .img-left-side {
+  display: none;
+}
+
+.choose-button {
+  width: 70%;
+  background-color: #f0c939;
+  color: #b5286c;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  &:visited {
+    background-color: #f0c939;
+    color: #b5286c;
+  }
+  &:hover {
+    background-color: #eb0;
+    color: #b9015a;
+  }
+}

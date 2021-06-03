@@ -1,0 +1,50 @@
+%h1= t('main.index.start_work')
+.image
+  .row
+    .col-md-3
+      .left_controls
+        .select_theme
+          = render 'work/button_theme_select', locale: @current_locale
+      %br
+    .col-md-9
+      .image_display
+        .row.image
+          .col-md-12
+            %h2.up-theme{:title => "theme_name"}
+              #{@selected_theme}
+          .col-md-12
+            %h2.up{:title => "Image file name"}
+              #{@selected_image_name}
+          .col-md-1
+            .img-left-side
+              %h3{:title => "Go to previous image"}
+                %i.fa.fa-chevron-circle-left.strong
+          .col-md-4
+            .img-center{:title => "Default image"}
+              %img{:alt => "Default Image", :src =>
+                '../assets/pictures/vogue052020.jfif',
+                :title => "Default image" }
+          .col-md-1
+            .img-right-side
+              %h3{:title => "Go to next image"}
+                %i.fa.fa-chevron-circle-right
+          .col-md-6
+            .image_user_value{:title => "Expert value"}
+              = t('.expert_value')
+              %span#values_qty
+                #{@values_qty}
+            .image_ave_value
+              = t('.ave_value')
+              %span#ave_value
+            .user-value-exists
+              = t('.your_value')
+              %span#user_value
+            .set-user-value
+              %h3= t('.leave_answer')
+              = form_tag("/save_value", remote: true,  :format => :js) do
+                %input{:type => "number", :name => "value", :min => "1", :max => "10"}
+                %input.main-button{:type => "button",
+                  :id => "save_value_button",
+                  :value => t('.submit')}
+= link_to t('main.back'), main_index_path
+

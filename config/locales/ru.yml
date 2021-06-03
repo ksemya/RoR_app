@@ -1,0 +1,38 @@
+ru:
+  main:
+    back: "Вернуться на главную"
+    index:
+      welcome: "Добро пожаловать в Experteese"
+      start_work: "Начать работу!"
+  users:
+    form:
+      name: "Имя"
+      password: "Пароль"
+      password_confirmation: "Подтвердите пароль"
+      sign_up: "Регистрация"
+  sessions:
+    form:
+      sign_in: "Войти"
+  work:
+    button_theme_select:
+      select_theme: "Выберите тему"
+    index:
+      select_theme: "Выберите тему, чтобы оставить ответ"
+      first_image: "Изображение по умолчанию"
+      expert_value: "Экспертных оценок:"
+      ave_value: "Средняя оценка:"
+      your_value: "Ваша оценка:"
+      leave_answer: "Оставьте свою оценку"
+      submit: "Подтвердить"
+  shared:
+    header:
+      home: "Главная"
+      work: "Рабочая область"
+      sign_in: "Войти"
+      sign_out: "Выйти"
+      settings: "Настройки"
+    footer:
+      help: "Помощь"
+      contacts: "Контакты"
+      about: "О нас"
+      ruby_site: "Сайт Ruby on Rails"

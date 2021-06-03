@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @picture.name
+%p
+  %b File:
+  = @picture.file
+%p
+  %b Ave value:
+  = @picture.ave_value
+%p
+  %b Theme:
+  = @picture.theme_id
+
+= link_to 'Edit', edit_picture_path(@picture)
+\|
+= link_to 'Back', pictures_path
