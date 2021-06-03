@@ -1,3 +1,7 @@
+$(".img-right-side").off("click");
+$(".img-left-side").off("click");
+$("#save_value_button").off("click");
+
 var imageData = '<%= raw @image_data %>';
 console.log("IN display_theme: @image_data = " + imageData );
 var valuesQty = '<%= @image_data[:values_qty] %>';
